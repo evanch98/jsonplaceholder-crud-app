@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# jsonplaceholder-crud-app
+
+![GitHub repo size](https://img.shields.io/github/repo-size/evanch98/jsonplaceholder-crud-app)
+![GitHub stars](https://img.shields.io/github/stars/evanch98/jsonplaceholder-crud-app?style=social)
+![GitHub forks](https://img.shields.io/github/forks/evanch98/jsonplaceholder-crud-app?style=social)
+
+## Description
+
+A user-friendly frontend application using Next.js, React, TypeScript, Tailwind CSS, Zustand, JSONPlaceholder and Shadcn UI. This application allows users to interact with the JSONPlaceholder API for CRUD operations.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/evanch98/jsonplaceholder-crud-app.git
+cd your-repo-name
+```
+
+2. **Install the required dependencies:**
+
+```bash
+npm install
+```
+
+3. **Run the development server:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Formatting the Code:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run  the following command to format the code to match the code formatting rule for this project.
+```bash
+npm run format
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Development
 
-## Learn More
+- The components for this project are located in the `src/components` folder.
+- The `src/app` folder contains pages (`page.tsx` and `posts/page.tsx`), layout file (`layout.tsx`), and the global style file (`globals.css`).
+- The `src/app/api` folder contains the api routes to interact with the JSONPlaceholder API.
+- The `src/store` folder contains global state management files.
+- The `src/store/use-data.ts` file is for handling data from the JSONPlaceholder API.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used in This Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Shadcn UI](https://ui.shadcn.com/)
