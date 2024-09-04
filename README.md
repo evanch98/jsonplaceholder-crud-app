@@ -8,6 +8,8 @@
 
 A user-friendly frontend application using Next.js, React, TypeScript, Tailwind CSS, Zustand, JSONPlaceholder and Shadcn UI. This application allows users to interact with the JSONPlaceholder API for CRUD operations.
 
+You can test the live application [here](https://jsonplaceholder-crud-app.vercel.app/).
+
 ## Getting Started
 
 These instructions will help you set up and run the project on your local machine for development and testing purposes.
