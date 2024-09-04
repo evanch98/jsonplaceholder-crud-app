@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { create } from 'zustand';
 
-type Post = {
+export type Post = {
   id: number;
   title: string;
   body: string;
