@@ -19,6 +19,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Input } from './ui/input';
+import { useRouter } from 'next/navigation';
+import { useData } from '@/store/use-data';
 
 const formSchema = z.object({
   title: z.string().min(1).max(100),
@@ -26,7 +28,10 @@ const formSchema = z.object({
 });
 
 export const CreateModal = () => {
+  const router = useRouter();
   const { isOpen, onClose } = useCreateModal();
+
+  const { addPost } = useData();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,7 +42,10 @@ export const CreateModal = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    addPost({ title: values.title, body: values.body });
+    form.reset();
+    onClose();
+    router.push('/posts');
   }
 
   return (
