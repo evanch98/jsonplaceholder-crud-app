@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { CreateModal } from './create-modal';
 import { DeleteModal } from './delete-modal';
+import { EditModal } from './edit-modal';
 
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -19,6 +20,7 @@ export const ModalProvider = () => {
     <>
       <CreateModal />
       <DeleteModal />
+      <EditModal />
     </>
   );
 };
