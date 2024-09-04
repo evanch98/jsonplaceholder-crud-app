@@ -19,7 +19,7 @@ const PostsPage = () => {
   }, [fetchPosts]);
 
   return (
-    <main className="mx-auto flex w-full max-w-screen-md flex-col items-center justify-center gap-y-6 pt-16">
+    <main className="mx-auto flex w-full max-w-screen-md flex-col items-center justify-center gap-y-6 pb-4 pt-16">
       <div className="flex w-full flex-col items-center justify-center gap-y-6">
         <div className="flex flex-col items-center justify-center gap-y-1">
           <h1 className="text-4xl font-semibold text-primary">
