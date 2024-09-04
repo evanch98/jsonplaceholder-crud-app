@@ -23,7 +23,7 @@ export async function PATCH(req: Request) {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-        body: JSON.stringify({ title, body }),
+        body: JSON.stringify({ id, title, body }),
       },
     );
     const updatedPost = await res.json();
