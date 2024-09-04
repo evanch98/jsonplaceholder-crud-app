@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Post } from '@/store/use-data';
 import useDeleteModal from '@/store/use-delete-modal';
+import useEditModal from '@/store/use-edit-modal';
 import { EllipsisVertical, Pen, Trash } from 'lucide-react';
 
 interface PostCardProps {
@@ -14,7 +15,8 @@ interface PostCardProps {
 }
 
 export const PostCard = ({ post }: PostCardProps) => {
-  const { onOpen } = useDeleteModal();
+  const { onOpen: onOpenDeleteModal } = useDeleteModal();
+  const { onOpen: onOpenEditModal } = useEditModal();
 
   return (
     <Card key={post.id}>
@@ -33,6 +35,7 @@ export const PostCard = ({ post }: PostCardProps) => {
             <DropdownMenuContent>
               <Button
                 variant="ghost"
+                onClick={() => onOpenEditModal(post.id, post.title, post.body)}
                 className="flex w-full items-center justify-start gap-x-2"
               >
                 <Pen className="size-4" />
@@ -40,7 +43,7 @@ export const PostCard = ({ post }: PostCardProps) => {
               </Button>
               <Button
                 variant="ghost"
-                onClick={() => onOpen(post.id)}
+                onClick={() => onOpenDeleteModal(post.id)}
                 className="flex w-full items-center justify-start gap-x-2"
               >
                 <Trash className="size-4 text-destructive" />
