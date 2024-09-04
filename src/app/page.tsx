@@ -1,10 +1,12 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import useCreateModal from '@/store/use-create-modal';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const router = useRouter();
+  const { onOpen } = useCreateModal();
 
   return (
     <main className="flex h-full w-full flex-col items-center justify-center">
@@ -19,7 +21,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex gap-x-4">
-          <Button>Create a post</Button>
+          <Button onClick={onOpen}>Create a post</Button>
           <Button
             variant="outline"
             onClick={() => router.push('/posts')}
