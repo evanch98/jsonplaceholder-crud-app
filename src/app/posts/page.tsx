@@ -19,13 +19,13 @@ const PostsPage = () => {
   }, [fetchPosts]);
 
   return (
-    <main className="mx-auto flex w-full max-w-screen-md flex-col items-center justify-center gap-y-6 pb-4 pt-16">
+    <main className="mx-auto flex w-full max-w-screen-md flex-col items-center justify-center gap-y-6 px-2 pb-4 pt-16">
       <div className="flex w-full flex-col items-center justify-center gap-y-6">
         <div className="flex flex-col items-center justify-center gap-y-1">
-          <h1 className="text-4xl font-semibold text-primary">
+          <h1 className="text-center text-4xl font-semibold text-primary">
             Powered by JSONPlaceholder.
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-center text-muted-foreground">
             The posts are from JSONPlaceholder. You can create, read, update,
             and delete posts.
           </p>
