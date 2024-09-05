@@ -7,7 +7,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className="flex h-full w-full flex-col items-center justify-center p-2">
+    <main className="flex h-full w-full flex-col items-center justify-center px-2">
       <div className="flex w-full flex-col items-center justify-center gap-y-6">
         <div className="flex flex-col items-center justify-center gap-y-1">
           <h1 className="text-center text-4xl font-semibold text-primary">
